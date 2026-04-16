@@ -3,6 +3,6 @@
 #include<fstream>
 #include<iostream>
 
-cauHoi* loadQuestionBank(const std::string& filePath, int& count);
+CauHoi* loadQuestionBank(const std::string& filePath, int& count);
 
 void deleteQuestionBank(CauHoi*& bank);
