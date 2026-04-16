@@ -5,4 +5,4 @@
 
 cauHoi* loadQuestionBank(const std::string& filePath, int& count);
 
-void deleteQuestion(cauHoi*& bank);
+void deleteQuestionBank(CauHoi*& bank);

@@ -1,10 +1,9 @@
-Số lượng câu hỏi (Ví dụ: 10)
+10
 Nội dung câu hỏi 1
 Phương án A
 Phương án B
 Phương án C
 Phương án D
-Đáp án đúng (A/B/C/D)
-Độ khó (1/2/3)
-Nội dung câu hỏi 2
+A
+1
 ...

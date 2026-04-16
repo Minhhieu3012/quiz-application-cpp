@@ -1,14 +1,14 @@
 #pragma once
 #include<string>
 
-struct cauHoi {
+struct CauHoi {
 	std::string noiDung;
 	std::string dapAn[4];
 	char dapAnDung;
 	int doKho;
 };
 
-struct thiSinh {
+struct ThiSinh {
 	std::string maThiSinh;
 	std::string hoTen;
 

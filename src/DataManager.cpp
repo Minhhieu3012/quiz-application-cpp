@@ -1,6 +1,6 @@
 #include "../include/DataManager.h"
 
-cauHoi* loadQuestionBank(const std::string& filePath, int& count) {
+CauHoi* loadQuestionBank(const std::string& filePath, int& count) {
 	std::ifstream file(filePath);
 	if (!file.is_open()) {
 		std::cerr << "Loi: Khong the mo file " << filePath << std::endl;
@@ -10,7 +10,7 @@ cauHoi* loadQuestionBank(const std::string& filePath, int& count) {
 	file >> count;
 	file.ignore();
 
-	cauHoi* bank = new cauHoi[count];
+	CauHoi* bank = new CauHoi[count];
 
 	for (int i = 0; i < count; i++) {
 		std::getline(file, bank[i].noiDung);
@@ -26,7 +26,7 @@ cauHoi* loadQuestionBank(const std::string& filePath, int& count) {
 	return bank;
 }
 
-void deleteQuestionBank(cauHoi*& bank) {
+void deleteQuestionBank(CauHoi*& bank) {
 	if (bank != nullptr) {
 		delete[] bank;
 		bank = nullptr;
