@@ -32,3 +32,33 @@ void deleteQuestionBank(CauHoi*& bank) {
 		bank = nullptr;
 	}
 }
+
+CauHoi* filterQuestionsByDifficulty(CauHoi* bank, int totalCount, int difficultyLevel, int& filteredCount) {
+	if (bank == nullptr || totalCount <= 0) {
+		filteredCount = 0;
+		return nullptr;
+	}
+
+	filteredCount = 0;
+	for (int i = 0; i < totalCount; i++) {
+		if (bank[i].doKho == difficultyLevel) {
+			filteredCount++;
+		}
+	}
+
+	if (filteredCount == 0) {
+		return nullptr;
+	}
+
+	CauHoi* filteredBank = new CauHoi[filteredCount];
+	
+	int currentIndex = 0;
+	for (int i = 0; i < totalCount; i++) {
+		if (bank[i].doKho == difficultyLevel) {
+			filteredBank[currentIndex] = bank[i];
+			currentIndex++;
+		}
+	}
+	return filteredBank;
+}
+
