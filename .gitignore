@@ -1,4 +1,4 @@
-﻿# vs code 
+# vs code 
 .vs/
 *.user
 *.userosscache
@@ -23,3 +23,5 @@ x86/
 *.tmp
 
 test_thanhvien3.cpp
+
+test_thanhvien4.cpp

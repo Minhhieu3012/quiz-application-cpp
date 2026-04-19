@@ -1,0 +1,71 @@
+10
+Khí nào chiếm tỉ lệ cao nhất trong bầu khí quyển Trái Đất?
+Oxy
+Nitơ
+Cacbonic
+Argon
+B
+1
+Ai là tác giả của thuyết tiến hóa thông qua chọn lọc tự nhiên?
+Isaac Newton
+Charles Darwin
+Gregor Mendel
+Louis Pasteur
+B
+2
+Đại dương nào có diện tích lớn nhất thế giới?
+Đại Tây Dương
+Ấn Độ Dương
+Bắc Băng Dương
+Thái Bình Dương
+D
+3
+Đơn vị tiêu chuẩn để đo cường độ dòng điện là gì?
+Volt (V)
+Watt (W)
+Ampere (A)
+Ohm (Omega)
+C
+2
+Thành phố nào được mệnh danh là "Kinh đô ánh sáng"?
+London
+New York
+Paris
+Tokyo
+C
+2
+Hệ điều hành Android được phát triển dựa trên hạt nhân (kernel) nào?
+Windows NT
+Linux
+Unix
+macOS
+B
+3
+Hành tinh nào nằm ở vị trí gần Mặt Trời nhất?
+Sao Kim
+Sao Hỏa
+Sao Thủy
+Sao Mộc
+C
+1
+Kim loại nào ở trạng thái lỏng trong điều kiện nhiệt độ phòng?
+Vàng
+Thủy ngân
+Sắt
+Đồng
+B
+1
+Bức tranh nổi tiếng "Mona Lisa" là tác phẩm của họa sĩ nào?
+Vincent van Gogh
+Pablo Picasso
+Leonardo da Vinci
+Michelangelo
+C
+2
+Giao thức nào được sử dụng để truyền tải dữ liệu web có mã hóa bảo mật?
+HTTP
+FTP
+HTTPS
+SMTP
+C
+1
