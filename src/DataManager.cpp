@@ -61,4 +61,3 @@ CauHoi* filterQuestionsByDifficulty(CauHoi* bank, int totalCount, int difficulty
 	}
 	return filteredBank;
 }
-

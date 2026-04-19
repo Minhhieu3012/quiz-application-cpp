@@ -21,3 +21,5 @@ x86/
 # temporary files
 *.log
 *.tmp
+
+test_thanhvien4.cpp
