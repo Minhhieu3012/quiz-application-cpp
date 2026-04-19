@@ -22,4 +22,6 @@ x86/
 *.log
 *.tmp
 
+test_thanhvien3.cpp
+
 test_thanhvien4.cpp
