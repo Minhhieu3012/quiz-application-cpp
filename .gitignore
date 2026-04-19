@@ -1,0 +1,25 @@
+# vs code 
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# build output
+bin/
+obj/
+out/
+debug/
+release/
+x64/
+x86/
+
+# executables
+*.exe
+*.pdb
+*.ilk
+
+# temporary files
+*.log
+*.tmp
+
+test_thanhvien4.cpp
