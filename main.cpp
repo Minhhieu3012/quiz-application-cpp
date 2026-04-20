@@ -6,7 +6,7 @@
 #include "include/HistoryManager.h"
 
 int main() {
-    initRandomizer(); 
+    initRandomizer();
     bool isRunning = true;
 
     while (isRunning) {
@@ -45,11 +45,22 @@ int main() {
 
                 time_t startTime;
                 startTimer(startTime);
-                runQuizLoop(ts, examBank, examCount, 15, startTime); 
+                runQuizLoop(ts, examBank, examCount, 15, startTime);
 
                 gradeExam(examBank, examCount, ts);
                 displayStatistics(ts, examCount, startTime);
 
+                // GỌI HÀM CỦA THÀNH VIÊN 4: Lưu lịch sử
+                saveHistory(ts, "data/History.txt");
+
+                // GỌI HÀM CỦA THÀNH VIÊN 4: Xem lại bài thi
+                std::cout << "\nBan co muon xem lai bai thi khong? (1: Co / 0: Khong): ";
+                int xemLai; std::cin >> xemLai;
+                if (xemLai == 1) {
+                    std::cout << "Chi xem cau sai? (1: Co / 0: Xem tat ca): ";
+                    int chiXemSai; std::cin >> chiXemSai;
+                    reviewExam(examBank, examCount, ts, chiXemSai == 1);
+                }
 
                 delete[] ts.dapAnDaChon;
                 deleteQuestionBank(examBank);
@@ -57,7 +68,20 @@ int main() {
             deleteQuestionBank(fullBank);
             system("pause");
         }
-        else if (mainChoice == 0) isRunning = false;
+        else if (mainChoice == 2) {
+            // XỬ LÝ CHO LỰA CHỌN SỐ 2 (Đã được bổ sung)
+            system("cls");
+            int historyCount = 0;
+            ThiSinh* historyList = loadHistory("data/History.txt", historyCount);
+
+            displayLeaderboard(historyList, historyCount, 5); // In Top 5
+
+            deleteHistory(historyList);
+            system("pause"); // Lệnh này giữ màn hình lại để bạn kịp xem bảng xếp hạng
+        }
+        else if (mainChoice == 0) {
+            isRunning = false;
+        }
     }
 
     return 0;

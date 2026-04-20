@@ -1,68 +1,68 @@
 10
-Khí nào chiếm tỉ lệ cao nhất trong bầu khí quyển Trái Đất?
+Khi nao chiem ti le cao nhat trong bau khi quyen Trai Dat?
 Oxy
-Nitơ
+Nito
 Cacbonic
 Argon
 B
 1
-Ai là tác giả của thuyết tiến hóa thông qua chọn lọc tự nhiên?
+Ai la tac gia cua thuyet tien hoa thong qua chon loc tu nhien?
 Isaac Newton
 Charles Darwin
 Gregor Mendel
 Louis Pasteur
 B
 2
-Đại dương nào có diện tích lớn nhất thế giới?
-Đại Tây Dương
-Ấn Độ Dương
-Bắc Băng Dương
-Thái Bình Dương
+Dai duong nao co dien tich lon nhat the gioi?
+Dai Tay Duong
+An Do Duong
+Bac Bang Duong
+Thai Binh Duong
 D
 3
-Đơn vị tiêu chuẩn để đo cường độ dòng điện là gì?
+Don vi tieu chuan de do cuong do dong dien la gi?
 Volt (V)
 Watt (W)
 Ampere (A)
 Ohm (Omega)
 C
 2
-Thành phố nào được mệnh danh là "Kinh đô ánh sáng"?
+Thanh pho nao duoc menh danh la "Kinh do anh sang"?
 London
 New York
 Paris
 Tokyo
 C
 2
-Hệ điều hành Android được phát triển dựa trên hạt nhân (kernel) nào?
+He dieu hanh Android duoc phat trien dua tren hat nhan (kernel) nao?
 Windows NT
 Linux
 Unix
 macOS
 B
 3
-Hành tinh nào nằm ở vị trí gần Mặt Trời nhất?
+Hanh tinh nao nam o vi tri gan Mat Troi nhat?
 Sao Kim
-Sao Hỏa
-Sao Thủy
-Sao Mộc
+Sao Hoa
+Sao Thuy
+Sao Moc
 C
 1
-Kim loại nào ở trạng thái lỏng trong điều kiện nhiệt độ phòng?
-Vàng
-Thủy ngân
-Sắt
-Đồng
+Kim loai nao o trang thai long trong dieu kien nhiet do phong?
+Vang
+Thuy ngan
+Sat
+Dong
 B
 1
-Bức tranh nổi tiếng "Mona Lisa" là tác phẩm của họa sĩ nào?
+Buc tranh noi tieng "Mona Lisa" la tac pham cua hoa si nao?
 Vincent van Gogh
 Pablo Picasso
 Leonardo da Vinci
 Michelangelo
 C
 2
-Giao thức nào được sử dụng để truyền tải dữ liệu web có mã hóa bảo mật?
+Giao thuc nao duoc su dung de truyen tai du lieu web co ma hoa bao mat?
 HTTP
 FTP
 HTTPS
