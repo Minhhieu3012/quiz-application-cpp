@@ -2,8 +2,6 @@
 #include <fstream>
 #include <iostream>
 
-// LƯU OUTPUT
-
 void saveHistory(const ThiSinh& ts, const std::string& filePath) {
     //ghi tiếp nối vào cuối file
     std::ofstream file(filePath, std::ios::app); 
@@ -97,17 +95,15 @@ void reviewExam(const CauHoi* bank, int count, const ThiSinh& ts, bool onlyWrong
     }
 
     int saiCount = 0;
-    int dungCount = 0; // Thêm biến đếm số câu đúng
 
     for (int i = 0; i < count; i++) {
         bool isCorrect = (ts.dapAnDaChon[i] == bank[i].dapAnDung);
-        
-        if (isCorrect) dungCount++; // Tăng biến đếm nếu đúng
-        else saiCount++;
 
-        // Chỉ xem các câu làm sai
+        if (!isCorrect) saiCount++;
+
+        // Bộ lọc: Chỉ xem các câu làm sai
         if (onlyWrong && isCorrect) {
-            continue; 
+            continue;
         }
 
         std::cout << "Cau " << i + 1 << ": " << bank[i].noiDung << "\n";
@@ -119,20 +115,5 @@ void reviewExam(const CauHoi* bank, int count, const ThiSinh& ts, bool onlyWrong
 
     if (onlyWrong && saiCount == 0) {
         std::cout << "Tuyet voi! Ban khong lam sai cau nao.\n\n";
-    }
-
-    // THỐNG KÊ HIỆU SUẤT 
-    if (!onlyWrong) { // Chỉ in thống kê khi xem toàn bộ bài
-        std::cout << "=== THONG KE HIEU SUAT ===\n";
-        
-        // Tính tỷ lệ % 
-        float tiLeDung = ((float)dungCount / count) * 100;
-        
-        // Tính thời gian trung bình 
-        float tgTrungBinh = (float)ts.thoiGianLamBai / count;
-
-        std::cout << "- Ty le tra loi dung: " << tiLeDung << "%\n";
-        std::cout << "- Thoi gian lam bai trung binh: " << tgTrungBinh << " giay/cau\n";
-        std::cout << "==========================\n";
     }
 }
