@@ -32,7 +32,6 @@ void displayStatistics(const ThiSinh& ts, int totalCount, time_t startTime) {
     std::cout << "========================================" << std::endl;
     std::cout << "Thi sinh: " << ts.hoTen << " (MSSV: " << ts.maThiSinh << ")" << std::endl;
 
-    // ĐOẠN BỔ SUNG: Chuyển đổi và in ra Thời gian bắt đầu
     char* timeString = ctime(&startTime);
     std::cout << "Thoi gian bat dau: " << timeString; // ctime tự động có sẵn dấu xuống dòng
 

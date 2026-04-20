@@ -50,10 +50,8 @@ int main() {
                 gradeExam(examBank, examCount, ts);
                 displayStatistics(ts, examCount, startTime);
 
-                // GỌI HÀM CỦA THÀNH VIÊN 4: Lưu lịch sử
                 saveHistory(ts, "data/History.txt");
 
-                // GỌI HÀM CỦA THÀNH VIÊN 4: Xem lại bài thi
                 std::cout << "\nBan co muon xem lai bai thi khong? (1: Co / 0: Khong): ";
                 int xemLai; std::cin >> xemLai;
                 if (xemLai == 1) {
@@ -69,7 +67,6 @@ int main() {
             system("pause");
         }
         else if (mainChoice == 2) {
-            // XỬ LÝ CHO LỰA CHỌN SỐ 2 (Đã được bổ sung)
             system("cls");
             int historyCount = 0;
             ThiSinh* historyList = loadHistory("data/History.txt", historyCount);
@@ -77,7 +74,7 @@ int main() {
             displayLeaderboard(historyList, historyCount, 5); // In Top 5
 
             deleteHistory(historyList);
-            system("pause"); // Lệnh này giữ màn hình lại để bạn kịp xem bảng xếp hạng
+            system("pause"); 
         }
         else if (mainChoice == 0) {
             isRunning = false;

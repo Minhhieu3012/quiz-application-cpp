@@ -34,7 +34,7 @@ void runQuizLoop(ThiSinh& ts, const CauHoi* bank, int totalCount, int timeLimitM
     while (!isFinished) {
         system("cls");
 
-        // 1. Kiểm tra thời gian (Gọi từ TimeAndScoreManager)
+        // Kiểm tra thời gian (Gọi từ TimeAndScoreManager)
         int elapsed = getElapsedTime(startTime);
         int remaining = (timeLimitMinutes * 60) - elapsed;
 
@@ -45,12 +45,12 @@ void runQuizLoop(ThiSinh& ts, const CauHoi* bank, int totalCount, int timeLimitM
             break;
         }
 
-        // 2. Hiển thị Header
+        // Hiển thị Header
         std::cout << "Thi sinh: " << ts.hoTen << " | Con lai: "
             << remaining / 60 << "p " << remaining % 60 << "s" << std::endl;
         std::cout << "------------------------------------------------" << std::endl;
 
-        // 3. Hiển thị Câu hỏi
+        // Hiển thị Câu hỏi
         std::cout << "[Cau " << (currentIdx + 1) << "/" << totalCount << "]" << std::endl;
         std::cout << bank[currentIdx].noiDung << std::endl;
         for (int i = 0; i < 4; i++) {
@@ -60,7 +60,7 @@ void runQuizLoop(ThiSinh& ts, const CauHoi* bank, int totalCount, int timeLimitM
         if (ts.dapAnDaChon[currentIdx] != ' ')
             std::cout << "\n=> Ban da chon: " << ts.dapAnDaChon[currentIdx] << std::endl;
 
-        // 4. Menu thao tác
+        // Menu thao tác
         std::cout << "\n--- THAO TAC ---" << std::endl;
         std::cout << "1. Chon/Doi dap an | 2. Ke tiep | 3. Quay lai | 4. Dashboard | 5. NOP BAI" << std::endl;
         std::cout << "Chon (1-5): ";
