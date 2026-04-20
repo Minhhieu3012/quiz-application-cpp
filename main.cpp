@@ -1,87 +1,64 @@
-#include "functions.h"
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
-
-using namespace std;
+#include "include/DataManager.h"
+#include "include/Randomizer.h"
+#include "include/MenuLogic.h"
+#include "include/TimeAndScoreManager.h"
+#include "include/HistoryManager.h"
 
 int main() {
-    int luaChon;
-    bool dangChay = true;
+    initRandomizer(); 
+    bool isRunning = true;
 
-    // Khoi tao hat giong random cho ham tron de
-    srand((unsigned)time(NULL));
+    while (isRunning) {
+        system("cls");
+        std::cout << "========================================" << std::endl;
+        std::cout << "       HE THONG THI TRAC NGHIEM C++     " << std::endl;
+        std::cout << "========================================" << std::endl;
+        std::cout << "1. Bat dau ca thi moi" << std::endl;
+        std::cout << "2. Xem Bang xep hang" << std::endl;
+        std::cout << "0. Thoat" << std::endl;
+        std::cout << "Lua chon: ";
 
-    while (dangChay) {
-        system("cls"); // Xoa man hinh
+        int mainChoice;
+        std::cin >> mainChoice;
 
-        cout << "========================================\n";
-        cout << "       UNG DUNG THI TRAC NGHIEM         \n";
-        cout << "========================================\n";
-        cout << "1. Bat dau thi\n";
-        cout << "2. Xem bang xep hang (Top 5) [Dang xay dung]\n";
-        cout << "3/ Xem lich su thi [Dang xay dung]\n";
-        cout << "0. Thoat chuong trinh\n";
-        cout << "========================================\n";
-        cout << "Nhap lua chon cua ban: ";
-        cin >> luaChon;
-
-        switch (luaChon) {
-        case 1: {
+        if (mainChoice == 1) {
             ThiSinh ts;
-            ts.diem = 0;
-            ts.thoiGianLamBai = 0;
+            inputStudentInfo(ts);
 
-            nhapThongTin(&ts);
+            int totalInBank = 0;
+            CauHoi* fullBank = loadQuestionBank("data/QuestionBank.txt", totalInBank);
 
-            int doKho;
-            cout << "\nChon muc do thi(1. De | 2. Trung binh | 3. Kho) : ";
-            cin >> doKho;
-
-            // --- KET NOI FILE DATA THUC TE ---
-            int tongSoCau = 0;
-            CauHoi* danhSachCauHoi = nullptr;
-
-            cout << "\n[He thong] Dang tai du lieu tu ngan hang cau hoi...\n";
-            // Doc file QuestionBank.txt
-            if (!docCauHoiTuFile("QuestionBank.txt", danhSachCauHoi, tongSoCau)) {
+            if (!fullBank) {
                 system("pause");
-                break; // Loi file thi vang ra menu chinh
+                continue;
             }
 
-            cout << "[He thong] Load thanh cong " << tongSoCau << " cau hoi!\n";
+            std::cout << "Chon do kho (1: De, 2: TB, 3: Kho): ";
+            int level; std::cin >> level;
+            int examCount = 0;
+            CauHoi* examBank = filterQuestionsByDifficulty(fullBank, totalInBank, level, examCount);
 
-            // Xao tron de thi
-            xaoTronDeThi(danhSachCauHoi, tongSoCau);
-            cout << "[He thong] De thi da duoc xao tron ngau nhien!\n";
-            system("pause");
+            if (examBank) {
+                shuffleQuestions(examBank, examCount);
+                for (int i = 0; i < examCount; i++) shuffleAnswers(examBank[i]);
 
-            int thoiGianGioiHan = 15 * 60; // Gioi han 15 phut (900 giay)
+                time_t startTime;
+                startTimer(startTime);
+                runQuizLoop(ts, examBank, examCount, 15, startTime); 
 
-            // --- BAT DAU VAO PHONG THI ---
-            luongLamBaiThi(&ts, danhSachCauHoi, tongSoCau, thoiGianGioiHan);
+                gradeExam(examBank, examCount, ts);
+                displayStatistics(ts, examCount, startTime);
 
-            // Ket qua sau khi nhan Nop Bai
 
-            system("pause");
-
-            // Giai phong bo nho Mang dong Cau Hoi ( Bat buoc)
-            delete[] danhSachCauHoi;
-            break;
-        }
-        case 2:
-        case 3:
-            cout << "\n[Info] Chuc nang nay do Thanh vien khac phu trach.\n";
-            system("pause");
-            break;
-        case 0:
-            dangChay = false;
-            cout << "\nCam on ban da su dung ung dung!\n";
-            break;
-        default:
-            cout << "\nLua chon khong hop le!\n";
+                delete[] ts.dapAnDaChon;
+                deleteQuestionBank(examBank);
+            }
+            deleteQuestionBank(fullBank);
             system("pause");
         }
+        else if (mainChoice == 0) isRunning = false;
     }
+
     return 0;
 }
