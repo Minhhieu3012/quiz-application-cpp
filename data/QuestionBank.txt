@@ -1,0 +1,85 @@
+12
+Khi nao chiem ti le cao nhat trong bau khi quyen Trai Dat?
+Oxy
+Nito
+Cacbonic
+Argon
+B
+1
+Ai la tac gia cua thuyet tien hoa thong qua chon loc tu nhien?
+Isaac Newton
+Charles Darwin
+Gregor Mendel
+Louis Pasteur
+B
+2
+Dai duong nao co dien tich lon nhat the gioi?
+Dai Tay Duong
+An Do Duong
+Bac Bang Duong
+Thai Binh Duong
+D
+3
+Don vi tieu chuan de do cuong do dong dien la gi?
+Volt (V)
+Watt (W)
+Ampere (A)
+Ohm (Omega)
+C
+2
+Thanh pho nao duoc menh danh la "Kinh do anh sang"?
+London
+New York
+Paris
+Tokyo
+C
+2
+He dieu hanh Android duoc phat trien dua tren hat nhan (kernel) nao?
+Windows NT
+Linux
+Unix
+macOS
+B
+3
+Hanh tinh nao nam o vi tri gan Mat Troi nhat?
+Sao Kim
+Sao Hoa
+Sao Thuy
+Sao Moc
+C
+1
+Kim loai nao o trang thai long trong dieu kien nhiet do phong?
+Vang
+Thuy ngan
+Sat
+Dong
+B
+1
+Buc tranh noi tieng "Mona Lisa" la tac pham cua hoa si nao?
+Vincent van Gogh
+Pablo Picasso
+Leonardo da Vinci
+Michelangelo
+C
+2
+Giao thuc nao duoc su dung de truyen tai du lieu web co ma hoa bao mat?
+HTTP
+FTP
+HTTPS
+SMTP
+C
+1
+Quoc gia nao co dan so dong nhat the gioi tinh den nam 2025?
+An Do
+My
+Indonesia
+Brazil
+A
+3
+Thuat toan sap xep nao co do phuc tap trung binh la O(n log n)?
+Bubble Sort
+Insertion Sort
+Quick Sort
+Selection Sort
+C
+3

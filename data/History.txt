@@ -1,0 +1,5 @@
+123,Nguyen Van A ,4,142
+456,Nguyen Van B ,3,37
+789,Nguyen Van C,0,87
+000,Nguyen Van D ,1,43
+0892231,Phan Minh Hieu ,1,170
