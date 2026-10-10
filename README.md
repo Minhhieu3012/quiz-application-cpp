@@ -1,8 +1,8 @@
 # 🧠 ỨNG DỤNG THI TRẮC NGHIỆM C++
-## 📌 Giới thiệu dự án
+## Giới thiệu dự án
 Đây là dự án ứng dụng thi trắc nghiệm trên môi trường **Console (Terminal)**, được viết hoàn toàn bằng ngôn ngữ C++.
 
-## 🚀 Các chức năng chính
+## Các chức năng chính
 ### 1. Chức năng cơ bản
 - Load dữ liệu là bộ câu hỏi và đáp án từ file.
 
@@ -42,7 +42,7 @@
 
 ---
 
-## 📁 Cấu trúc File
+## Cấu trúc File
 - main.cpp: Tệp chứa hàm main và luồng chạy chính của giao diện.
 
 - functions.cpp / functions.h: Định nghĩa cấu trúc Struct và các hàm xử lý logic (trộn đề, tính điểm, đếm giờ...).
